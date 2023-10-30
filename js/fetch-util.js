@@ -5,6 +5,7 @@ function getSearchParams(params) {
 }
 
 export function getURL(path, options) {
+  option=options.toString
   const searchParams = getSearchParams(options);
 
   if (searchParams != null && searchParams != "") {
