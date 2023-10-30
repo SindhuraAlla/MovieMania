@@ -67,6 +67,52 @@
       <div class="row my-2 chart-container card bg-dark m-1 mb-5">
         <canvas id="genre-count-chart"></canvas>
       </div>
+      <div class="row my-2">
+        <div class="col-md-6"></div>
+        <div class="col-md-1 col-sm-12 genre-filter-text">Genre</div>
+        <div class="col-md-1 col-sm-12">
+          <div class="dropdown">
+            <button
+              class="btn btn-warning dropdown-toggle w-100"
+              type="button"
+              id="genreDropdownMenuSelected"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-genreDropdownMenuSelected="28"
+            >
+              Action
+            </button>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="genreDropdownMenuSource"
+              id="genreDropdownMenuSource"
+            ></div>
+          </div>
+        </div>
+
+        <div class="col-md-1 col-sm-12 genre-filter-text">Sort</div>
+        <div class="col-md-1 col-sm-12">
+          <div class="dropdown">
+            <button
+              class="btn btn-warning dropdown-toggle w-100"
+              type="button"
+              id="sortDropdownMenuSelected"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-sortDropdownMenuSelected="popularity.desc"
+            >
+              Rating <span class="sort-icon-color">&#8593;</span>
+            </button>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="sortDropdownMenuSource"
+              id="sortDropdownMenuSource"
+            ></div>
+          </div>
+        </div>
+      </div>
 
         <thead>
           <tr>
