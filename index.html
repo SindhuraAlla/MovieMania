@@ -1,1 +1,62 @@
-<!--Your HTML code here-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/nav.js" type="module"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script type="module"></script>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid green-background">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+            <img src="img/movie-logo-2.png" alt="Movie Logo" height="30" />
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item me-3">
+              <a class="nav-link" href="index.html"><i class="fas fa-home px-md-2 px-1"></i>Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="movies.html"><i class="fas fa-film px-md-2 px-1"></i>Movies</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="movie_details.html"><i class="fas fa-info-circle px-md-2 px-1"></i>Details</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="reviews.html"><i class="fas fa-info-circle px-md-2 px-1"></i>Reviews</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="about.html"><i class="fas fa-users px-md-2 px-1"></i>About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero text-white text-center py-5">
+      <p class="fst-italic">"Every great film should seem new everytime you see it"</p>
+      <h1 class="pb-2">MOVIE MANIA</h1>
+      <p>Discover the latest and greatest in the world of movies.</p>
+      <a class="btn btn-dark" href="movies.html">Explore Now</a>
+    </section>
+    <footer class="bg-dark text-white py-1 fixed-bottom text-end">
+      <div class="container">
+          <p>&copy; 2023 MovieMania. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
