@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/nav.js" type="module"></script>
+    <script src="js/reviews.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script type="module"></script>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid green-background">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+            <img src="img/movie-logo-2.png" alt="Movie Logo" height="30" />
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item me-3">
+              <a class="nav-link" href="index.html"><i class="fas fa-home px-md-2 px-1"></i>Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="movies.html"><i class="fas fa-film px-md-2 px-1"></i>Movies</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="movie_details.html"><i class="fas fa-info-circle px-md-2 px-1"></i>Details</a>
+            </li>
+            <li class="nav-item me-3">
+                <a class="nav-link" href="reviews.html"><i class="fas fa-info-circle px-md-2 px-1"></i>Reviews</a>
+              </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="about.html"><i class="fas fa-users px-md-2 px-1"></i>About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5 text-white">
+      <p class="text-info col-6">Note: Page is generated using static data, to be linked later with Movies</p>
+      <div class="row">
+        <div class="col movie-overview-title text-warning h1">Expend4bles</div>
+      </div>
+      <div class="col-6">
+          <h3>Add/Update Review</h3>
+          <form id="review-form">
+              <div class="form-group py-2">
+                  <label for="movie-name", class="fw-bold">Movie Name:</label>
+                  <input type="text" class="form-control bg-dark text-white" id="movie-name" required>
+              </div>
+              <div class="form-group py-2">
+                  <label for="user-name", class="fw-bold">Reviewer's Name:</label>
+                  <input type="text" class="form-control bg-dark text-white" id="user-name" required>
+              </div>
+              <div class="form-group py-2">
+                  <label for="description", class="fw-bold">Review Description:</label>
+                  <textarea class="form-control bg-dark text-white" id="description" rows="10" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+
+      <div class="mt-5">
+        <h2 class="text-warning">Reviews</h2>
+        <div id="reviews-list">
+          <div class="card bg-dark text-white my-2">
+            <div class="card-header">
+            <div class="card-title">
+            <span class="author-name">CinemaSerf</span>
+            <span class="rating-star">&#11088;</span>
+            <span class="rating-value">6.0</span>
+            </div> 
+            <div>on Sun Oct 08 2023</div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                To be honest, there's very little new in this formulaic action adventure. It's the usual old who has got the launch codes mystery that sees Sly Stallone's "Barney" recruit his best mate "Christmas" (Jason Statham) and their lethal gang of expendables to thwart the ambitions of an unknown criminal mastermind who is hoping to arm a boat load of nuclear missiles and start WWIII. Thing is, tragedy strikes very early on in the film and "Christmas" is taken off the team that is sent to avenge that. Is he staying home to fester? Of course not, and lucky too - for soon he is trying to free his pals from captivity before all hell breaks loose. Plenty of pyrotechnics, a bit of contrived sexual chemistry (with Megan Fox's "Gina") and loads of bullets and missiles flying around keep the film moving along well enough, but the story is the thinnest of the thin; the baddie's identity is hardly a challenge to discover nor is the twist in the tale at the end remotely unexpected. Good to see that the acting colossus that is Dolph Lundgren is still getting on screen nowadays, but otherwise this really is unremarkable stuff that even the usually charismatic Statham can't really sustain.
+              </p>
+              <button class="btn btn-warning btn-sm mt-2" onclick="updateReview()">Update</button>
+              <button class="btn btn-danger btn-sm mt-2 ml-2" onclick="deleteReview()">Delete</button>
+            </div>
+          </div>
+          <div class="card bg-dark text-white my-2">
+            <div class="card-header">
+            <div class="card-title">
+            <span class="author-name">MovieGuys</span>
+            <span class="rating-star">&#11088;</span>
+            <span class="rating-value">4.0</span>
+            </div> 
+            <div>on Sat Oct 14 2023</div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                A B grade action flick masquerading as a A list title. That's my reaction to Expendables 4. Yes, its a tired formula but at least previous Expendable films in this cheesy action franchise, showed a little genuine enthusiasm and included a cast of well worn but also well known, action stars. By contrast, the latest flick is easily forgettable with a good number of cast members, I've never heard of or seen on screen, infrequently. In summary, looks and behaves like a decidedly B grade action film with a sparse sprinkling of A grade action talent. Feels too, likes its going through the motions but not really delivering, if that makes sense.
+              </p>
+              <button class="btn btn-warning btn-sm mt-2" onclick="updateReview()">Update</button>
+              <button class="btn btn-danger btn-sm mt-2 ml-2" onclick="deleteReview()">Delete</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  
+    
+  </body>
+</html>
