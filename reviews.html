@@ -115,7 +115,27 @@
         </div>
     </div>
 
-  
+    <div class="modal fade" id="review-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title">Review status</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <p><strong>Movie Name:</strong> <span id="modal-movie-name"></span></p>
+                  <p><strong>Reviewer's Name:</strong> <span id="modal-user-name"></span></p>
+                  <p><strong>Review Description:</strong><span id="modal-description"></span></p>
+                  <p class="text-success">Review has been updated/created!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
   </body>
 </html>
