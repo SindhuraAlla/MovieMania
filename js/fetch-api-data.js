@@ -16,7 +16,7 @@ export async function getGenreListData() {
 
 export async function getMoviedCountByGenre() {
   const genres = await getGenreListData();
-  //const results = {};
+  const results = {};
 
   for (let genre of genres) {
     const moviesData = await getMoviesData({ with_genres: genre.id });
