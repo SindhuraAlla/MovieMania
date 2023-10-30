@@ -44,6 +44,39 @@ async function renderMovieOverview(id) {
   }
 }
 
+async function renderReviews(id) {
+  if (id != null) {
+    const data = await getMovieReviews(id);
+    const reviews = data.results;
+
+    const movieReviewsSection = document.getElementById("movieReviewsSection");
+
+    const cards = reviews.map((review) => {
+      return `<div class="card bg-dark text-white">
+          <div class="card-header">
+          <div class="card-title">
+          <span class="author-name">${review.author}</span>
+          <span class="rating-star">&#11088;</span>
+          <span class="rating-value">${
+            review?.author_details?.rating ?? "0"
+          }.0</span>
+          </div> 
+          <div>on ${new Date(review.created_at).toDateString()}</div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              ${review.content}
+            </p>
+          </div>
+        </div>`;
+    });
+
+    const heading = `<h2 class="text-warning">Reviews</h2>`;
+
+    movieReviewsSection.innerHTML = heading + cards.join(" ");
+  }
+}
+
 (function () {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
