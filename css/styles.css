@@ -116,3 +116,15 @@ table tr td, table tr th{
 #genre-count-chart {
   height: 300px !important;    /* Fixed height for the canvas */
 }
+
+.git-log {
+  font-family: monospace;
+  white-space: pre;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.git-author {
+  font-weight: bold;
+}
